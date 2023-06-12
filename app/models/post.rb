@@ -6,4 +6,5 @@ class Post < ApplicationRecord
   validates :published, inclusion: { in: [true, false]}
   validates :user_id, presence: true 
 
+
 end
