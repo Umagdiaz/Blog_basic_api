@@ -27,7 +27,7 @@ RSpec.describe "Posts", type: :request do
   end
 
   describe "with data in the DB" do
-    let!(:posts) { create_list(:post, 10, published: true) }
+    let!(:posts) { create_list(:post, 100, published: true) }
     it "should return all the published posts" do
       get '/posts?search='
       payload = JSON.parse(response.body)
