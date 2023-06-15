@@ -22,10 +22,13 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
   gem 'solargraph'
+  gem 'letter_opener'
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -33,9 +36,8 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails'
+  
   gem 'shoulda-matchers'
-  gem 'faker'
   gem 'database_cleaner-active_record'
 end
 
